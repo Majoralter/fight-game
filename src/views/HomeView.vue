@@ -12,9 +12,13 @@
 
       <div class="fighters">
         <div class="fighter-option" v-for="fighter in fighterOptions" :key="fighter.id" :disabled="isOptionsDisabled"
-          @click="() => {
-            addUserFighters(fighter.id)
-            clickSound.play()
+          @click="(event) => {
+            addUserFighters(fighter.id);
+            clickSound.play();
+            // Add style depending user click action, like color change, or other
+            const parentEl = event.target.parentElement;
+            parentEl.style.border = '3px solid green';
+
           }" @mouseover="hoverSound.play()">
           <img :src="require(`../assets/${fighter.class}.jpeg`)" alt="">
           <p><strong>ID: {{ fighter.id }}</strong></p>

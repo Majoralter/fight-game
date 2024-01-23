@@ -1,5 +1,28 @@
 {
   "userDetails": [
-    
+    {
+      "id": "9eec",
+      "user": {
+        "id": "19eb1fbe-dbde-47a2-a8e0-495598e932f6",
+        "name": "Jenrola Jackson",
+        "userName": "MajorAlter",
+        "isRegistered": true,
+        "credits": 100
+      },
+      "fighters": [
+        {
+          "id": "helr",
+          "class": "Healer",
+          "ability": "Regen 20 health points",
+          "imgSrc": "@/assets/healer.jpeg"
+        },
+        {
+          "id": "skmshr",
+          "class": "Skirmisher",
+          "ability": "See cpu's next attack",
+          "imgSrc": "@/assets/skirmisher.jpeg"
+        }
+      ]
+    }
   ]
 }

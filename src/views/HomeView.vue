@@ -73,7 +73,6 @@ export default {
 
   setup() {
     onMounted(() => {
-      localStorage.clear()
       if (JSON.parse(localStorage.getItem('playerFightGame')) !== null) {
         userDetails.value = JSON.parse(localStorage.getItem('playerFightGame'))
 

@@ -8,19 +8,22 @@ const updateUser = async (userObj) => {
         body: JSON.stringify(update),
       }; 
 
-      if(userObj) {
-        
-      }
+      try {
+        const response = await fetch(
+          "http://localhost:3000/userDetails",
+          options
+        );
 
-    const response = await fetch("http://localhost:3000/userDetails", options)
+        if (response.ok) {
+          const data = await response.json();
+          return data;
+        } else {
+          throw Error(response.status);
+        }
+      } catch (error) {
+        console.log(error.message)
+      }
     
-    if(response.ok){
-        const data = await response.json()
-        return data
-        
-    } else {
-        throw Error(response.status)
-    }
 }
 
 export default updateUser

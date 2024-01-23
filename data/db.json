@@ -1,0 +1,28 @@
+{
+  "userDetails": [
+    {
+      "id": "ee73",
+      "user": {
+        "id": "8957f4ac-4390-460a-b7fa-c86bf28165b3",
+        "name": "Jenrola Jackson",
+        "userName": "MajorAlter",
+        "isRegistered": true,
+        "credits": 100
+      },
+      "fighters": [
+        {
+          "id": "helr",
+          "class": "Healer",
+          "ability": "Regen 20 health points",
+          "imgSrc": "@/assets/healer.jpeg"
+        },
+        {
+          "id": "brt",
+          "class": "Brute",
+          "ability": "Remove 20 health points",
+          "imgSrc": "@/assets/brute.jpeg"
+        }
+      ]
+    }
+  ]
+}

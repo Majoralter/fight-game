@@ -1,10 +1,19 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/" exact>Home</router-link>
+    <router-link to="/shop">Shop</router-link>
+    <router-link to="/my-fighters">My fighters</router-link>
   </nav>
   <router-view/>
 </template>
+
+<script>
+import "./Sass/app.scss"
+
+export default {
+  name: 'App'
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -15,15 +24,23 @@
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
+nav{
+  max-width: 350px;
+  margin: 20px auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  a{
+    color: black;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    transition: all 300ms ease-in-out ;
 
-    &.router-link-exact-active {
-      color: #42b983;
+    &.router-link-active{
+      color: white;
+      background-color: #2c3e50;
     }
   }
 }
